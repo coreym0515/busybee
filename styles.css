@@ -1,0 +1,371 @@
+/* Busy Bee Website Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #F5A623;
+    --color-primary-dark: #E09000;
+    --color-success: #48BB78;
+    --color-bg: #FFF8F0;
+    --color-bg-light: #FFFFFF;
+    --color-text: #2D3748;
+    --color-text-light: #718096;
+    --color-border: #E2E8F0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--color-text);
+    background: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+nav {
+    background: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 24px;
+    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-light) 100%);
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-icon {
+    font-size: 80px;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 18px;
+    color: var(--color-text-light);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.app-store-badge img {
+    height: 54px;
+    transition: transform 0.2s;
+}
+
+.app-store-badge:hover img {
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.feature {
+    background: var(--color-bg-light);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+}
+
+.feature-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: var(--color-text-light);
+    font-size: 15px;
+}
+
+/* Page Content (Privacy, Support) */
+.page-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.page-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.last-updated,
+.intro {
+    color: var(--color-text-light);
+    margin-bottom: 32px;
+}
+
+.page-content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.page-content p {
+    margin-bottom: 16px;
+}
+
+.page-content ul {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.page-content li {
+    margin-bottom: 8px;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    margin: 32px 0;
+}
+
+.highlight-box p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #E65100;
+    margin: 0;
+}
+
+/* Summary Table */
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.summary-table th,
+.summary-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.summary-table th {
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.summary-table tr:nth-child(even) {
+    background: #FFFAF5;
+}
+
+.summary-table td:last-child {
+    color: var(--color-success);
+    font-weight: 500;
+}
+
+/* FAQ */
+.faq {
+    margin: 24px 0;
+}
+
+.faq-item {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.faq-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.faq-item p {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 15px;
+}
+
+/* Contact Box */
+.contact-box {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.contact-email {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin: 8px 0;
+}
+
+.response-time {
+    font-size: 14px;
+    color: var(--color-text-light);
+    margin: 8px 0 0 0;
+}
+
+/* Footer */
+footer {
+    background: var(--color-text);
+    color: white;
+    padding: 48px 24px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.footer-links a {
+    color: #A0AEC0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .tagline {
+        font-size: 20px;
+    }
+    
+    .page-content h1 {
+        font-size: 28px;
+    }
+    
+    .features {
+        padding: 40px 20px;
+    }
+    
+    .nav-links {
+        gap: 16px;
+    }
+}
